@@ -495,9 +495,9 @@ void InOrder(Tree *root)
 {
 	if(root!=NULL)
 	{
-		PreOrder(root->LChild);
+		InOrder(root->LChild);
 		printf("%c ",root->data);
-		PreOrder(root->RChild);
+		InOrder(root->RChild);
 	}
 }
 
@@ -506,8 +506,8 @@ void PostOrder(Tree *root)
 {
 	if(root!=NULL)
 	{
-		PreOrder(root->LChild);
-		PreOrder(root->RChild);
+		PostOrder(root->LChild);
+		PostOrder(root->RChild);
 		printf("%c ",root->data);
 	}
 }
